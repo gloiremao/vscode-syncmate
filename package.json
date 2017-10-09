@@ -20,95 +20,22 @@
     ],
     "main": "./extension",
     "contributes": {
-        "configuration": {
-            "type": "object",
-            "title": "SyncMate configuration",
-            "properties": {
-                "syncmate.enabled": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "Whether or not this extension is enabled"
-                },
-                "syncmate.onSave": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Whether or not to auto-sync on file save"
-                },
-                "syncmate.watch": {
-                    "type": [
-                        "boolean",
-                        "string"
-                    ],
-                    "default": true,
-                    "description": "Whether or not to watch for changes to sync. Optionally, a string can provide the glob pattern to watch"
-                },
-                "syncmate.host": {
-                    "type": "string",
-                    "default": "localhost",
-                    "description": "The remote host location (hostname or IP)"
-                },
-                "syncmate.dest": {
-                    "type": "string",
-                    "default": "/",
-                    "description": "The destination path on the remote"
-                },
-                "syncmate.user": {
-                    "type": "string",
-                    "default": "$(whoami)",
-                    "description": "The username to rsync with"
-                },
-                "syncmate.port": {
-                    "type": "number",
-                    "default": 22,
-                    "description": "The remote port"
-                },
-                "syncmate.flags": {
-                    "type": "string",
-                    "default": "",
-                    "description": "Additonal rsync flags to pass"
-                },
-                "syncmate.verbose": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "Whether or not to log additional details to the `Output` console"
-                },
-                "syncmate.quiet": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "Whether or not to show show errors quietly"
-                },
-                "syncmate.dirty": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "Whether or not to sync dirty (unsaved) files"
-                },
-                "syncmate.exclude": {
-                    "type": [
-                        "boolean",
-                        "object"
-                    ],
-                    "default": true,
-                    "description": "Files to exclude. If true, defaults to `files.exclude`"
-                },
-                "syncmate.onInit": {
-                    "type": "boolean",
-                    "default": false,
-                    "description": "Whether or not to sync the project when initially opened"
-                }
-            }
-        },
         "commands": [
             {
-                "command": "syncmate.syncOpenFiles",
-                "title": "SyncMate: Sync Open Files"
+				"command": "yo.init",
+				"title": "Yo: Initialize local config"
+			},
+            {
+                "command": "yo.syncOpenFiles",
+                "title": "Yo: Sync Open Files"
             },
             {
-                "command": "syncmate.syncProject",
-                "title": "SyncMate: Sync Project"
+                "command": "yo.syncProject",
+                "title": "Yo: Sync Project"
             },
             {
-                "command": "syncmate.syncDirectory",
-                "title": "SyncMate: Sync Directory"
+                "command": "yo.syncDirectory",
+                "title": "Yo: Sync Directory"
             }
         ]
     },

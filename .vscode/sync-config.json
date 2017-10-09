@@ -1,0 +1,17 @@
+{
+    "onSave": false,
+    "host": "localhost",
+    "dest": "/",
+    "local": "/Users/cmao/.vscode/extensions/vscode-syncmate",
+    "user": "$(whoami)",
+    "port": 22,
+    "flags": "",
+    "verbose": false,
+    "quiet": false,
+    "dirty": false,
+    "exclude": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ]
+}
